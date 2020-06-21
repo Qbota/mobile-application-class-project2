@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.smim.projekt2.scores.ScoresViewModel" />
+    </data>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:textSize="20pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scores" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:textSize="10pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X player" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:textSize="10pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(viewmodel.scoreX)}" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:textSize="10pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O player" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:textSize="10pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(viewmodel.scoreO)}" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to Menu"
+                android:onClick="onBackToMenuClick"/>
+        </TableRow>
+    </TableLayout>
+
+
+</layout>
